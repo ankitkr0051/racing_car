@@ -197,7 +197,7 @@
 			player_max.score= player.score
 			// Store
 		localStorage.setItem("Maxscore", player_max.score);
-			mscore.innerHTML = "Max Score: " + player_max.score ;
+			mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");  ;
 		}
 		
 		
