@@ -122,8 +122,8 @@
 <div class="carGame">
 	<div class="logo"><img src="logo.png"> </div>
 	<div class="logotag"><img src="logotag.png"> </div>
-	<div class="score"> </div>
-	<div class="mscore"> </div>
+	<div class="score"></div>
+	<div class="mscore">Max Score:00</div>
 	<div class="startScreen"> 
 		<p> Press here to start <br> 
 			Arrow keys to move <br>
@@ -134,7 +134,8 @@
 </div>
 <!-- html   ----------------------------------------------------------------------------------->
 <script>
-	
+	// Store
+		localStorage.setItem("Maxscore", 0);
 	const score = document.querySelector('.score');
 	const mscore = document.querySelector('.mscore');
 	const startScreen = document.querySelector('.startScreen');
@@ -193,7 +194,6 @@
 	function endGame(){
 		player.start = false;
 		startScreen.classList.remove('hide');
-		mscore.innerHTML = "Max Score: " + "00" ;
 		if(player_max.score<=player.score){
 			player_max.score= player.score}
 		mscore.innerHTML = "Max Score: " + player_max.score ;
