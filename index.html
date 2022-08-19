@@ -197,10 +197,7 @@
 			player_max.score= player.score
 		// Store
 		localStorage.setItem("Maxscore", player_max.score);	
-		}else{
-			localStorage.setItem("Maxscore", 0);
 		}
-		
 		mscore.innerHTML = "Max Score: " + player_max.score ;
 		
 		
@@ -311,7 +308,11 @@
 
 
 // Retrieve
- mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
+	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
+	else{
+		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
+	}
+ 
 
 </script>
 
