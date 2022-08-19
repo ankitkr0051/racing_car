@@ -228,6 +228,7 @@
 	}
 
 	function gamePlay(){
+	
 		// console.log("Hey I am clicked.");
 		let car = document.querySelector('.car');
 		let road = gameArea.getBoundingClientRect();
@@ -257,11 +258,7 @@
 	}
 
 	function start(){
-		// Retrieve
-	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
-	else{
-		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
-	}
+		
 
 		// gameArea.classList.remove('hide');
 		startScreen.classList.add('hide');
@@ -310,6 +307,12 @@
 
 		}
 		return "#"+c()+c()+c();
+	}
+	
+		// Retrieve
+	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
+	else{
+		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
 	}
 
 </script>
