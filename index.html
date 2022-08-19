@@ -194,8 +194,7 @@
 		player.start = false;
 		startScreen.classList.remove('hide');
 		if(player_max.score<=player.score){
-			player_max.score= player.score
-			
+			player_max.score= player.score	
 		}
 		// Store
 		localStorage.setItem("Maxscore", player_max.score);
@@ -310,10 +309,8 @@
 	}
 	
 		// Retrieve
-	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
-	else{
 		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
-	}
+	
 
 </script>
 
