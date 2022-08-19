@@ -145,7 +145,8 @@
 	startScreen.addEventListener('click', start);
 
 	let player = { speed : 5, score: 0 } ;
-	let player_max = { speed : 5, score: 0 }
+	let player_max = { speed : 5, score: 0  }
+	player_max.score=localStorage.getItem("Maxscore");
 
 	let keys = { ArrowUp : false, ArrowDown :false, ArrowLeft : false, ArrowRight : false }
 
