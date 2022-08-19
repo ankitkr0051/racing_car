@@ -193,6 +193,7 @@
 	function endGame(){
 		player.start = false;
 		startScreen.classList.remove('hide');
+		mscore.innerHTML = "Max Score: " + "00" ;
 		if(player_max.score<=player.score){
 			player_max.score= player.score}
 		mscore.innerHTML = "Max Score: " + player_max.score ;
