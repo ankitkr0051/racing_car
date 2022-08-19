@@ -134,8 +134,7 @@
 </div>
 <!-- html   ----------------------------------------------------------------------------------->
 <script>
-	// Store
-		localStorage.setItem("Maxscore", 0);
+
 	const score = document.querySelector('.score');
 	const mscore = document.querySelector('.mscore');
 	const startScreen = document.querySelector('.startScreen');
@@ -195,10 +194,14 @@
 		player.start = false;
 		startScreen.classList.remove('hide');
 		if(player_max.score<=player.score){
-			player_max.score= player.score}
-		mscore.innerHTML = "Max Score: " + player_max.score ;
+			player_max.score= player.score
 		// Store
-		localStorage.setItem("Maxscore", player_max.score);
+		localStorage.setItem("Maxscore", player_max.score);	
+		}else{
+			localStorage.setItem("Maxscore", 0);
+		}
+// 		mscore.innerHTML = "Max Score: " + player_max.score ;
+		
 		
 		startScreen.innerHTML = "Game Over <br> Your final score is " + player.score + " <br> Press here to restart the Game."; 
 	}
@@ -306,9 +309,9 @@
 	}
 
 
-
 // Retrieve
  mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
+
 </script>
 
 </body>
