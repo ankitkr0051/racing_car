@@ -195,9 +195,10 @@
 		startScreen.classList.remove('hide');
 		if(player_max.score<=player.score){
 			player_max.score= player.score
-		// Store
-		localStorage.setItem("Maxscore", player_max.score);	
+			
 		}
+		// Store
+		localStorage.setItem("Maxscore", player_max.score);
 		mscore.innerHTML = "Max Score: " + player_max.score ;
 		
 		
@@ -256,6 +257,11 @@
 	}
 
 	function start(){
+		// Retrieve
+	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
+	else{
+		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
+	}
 
 		// gameArea.classList.remove('hide');
 		startScreen.classList.add('hide');
@@ -305,14 +311,6 @@
 		}
 		return "#"+c()+c()+c();
 	}
-
-
-// Retrieve
-	if(Maxscore==NULL){ mscore.innerHTML = "Max Score: 00"}
-	else{
-		mscore.innerHTML = "Max Score: " + localStorage.getItem("Maxscore");
-	}
- 
 
 </script>
 
