@@ -200,7 +200,8 @@
 		}else{
 			localStorage.setItem("Maxscore", 0);
 		}
-// 		mscore.innerHTML = "Max Score: " + player_max.score ;
+		
+		mscore.innerHTML = "Max Score: " +  localStorage.getItem("Maxscore"); ;
 		
 		
 		startScreen.innerHTML = "Game Over <br> Your final score is " + player.score + " <br> Press here to restart the Game."; 
